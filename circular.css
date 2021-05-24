@@ -1,0 +1,63 @@
+:root {
+	--app-theme: #5e17ec;
+	--card-shadow: 0px 5px 22px rgba(0, 0, 0, 0.3);
+	--overlay-background: rgba(0, 0, 0, 0.7);
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: var(--app-theme);
+	display: grid;
+	place-items: center;
+}
+
+.app-paper {
+	width: 100%;
+	max-width: 40vw;
+	background: #fff;
+	padding: 20px 15px;
+	border-radius: 12px;
+	box-shadow: var(--card-shadow);
+	display: grid;
+	place-items: center;
+}
+
+.circular-avatar {
+	width: 200px;
+	height: 200px;
+	background: #555;
+	text-align: center;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+.circular-avatar img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.circular-avatar-label {
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay-background);
+	color: #fff;
+	display: grid;
+	place-items: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: 300;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	transition: 500ms ease;
+	-webkit-transition: 500ms ease;
+}
+
+.circular-avatar:hover .circular-avatar-label {
+	top: 0;
+}
