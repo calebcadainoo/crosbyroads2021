@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+	--app-theme: #5e17ec;
+	--card-shadow: 0px 5px 22px rgba(0, 0, 0, 0.3);
+	--overlay-background: rgba(0, 0, 0, 0.7);
+	--white-back: #fff;
+}
+
+body,
+html {
+	height: 100vh;
+	background: var(--app-theme);
+	display: grid;
+	place-items: center;
+	font-family: Montserrat, sans-serif;
+}
+
+.app-paper {
+	width: 450px;
+	background-color: var(--white-back);
+	box-shadow: var(--card-shadow);
+	padding: 20px 30px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.app-paper h3 {
+	letter-spacing: 0.5px;
+}
+
+.checkbox-list {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	padding: 30px 0;
+}
+
+.check-item input {
+	display: none;
+}
+
+.check-item span {
+	display: table;
+	font-size: 14px;
+	padding: 7px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* apply checked state styles */
+.check-item input[type="checkbox"]:checked ~ span {
+	color: var(--white-back);
+	background-color: var(--app-theme);
+}
