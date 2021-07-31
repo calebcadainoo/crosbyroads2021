@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce Rating Algorithm</title>
+  <link rel="stylesheet" href="rating.css">
+  <script defer src="rating.js"></script>
+</head>
+
+<body>
+  <div class="app-paper">
+    <h1>Rate this item</h1>
+    <div class="rating-stars">
+      <img src="star-empty.svg" alt="star" />
+      <img src="star-empty.svg" alt="star" />
+      <img src="star-empty.svg" alt="star" />
+      <img src="star-empty.svg" alt="star" />
+      <img src="star-empty.svg" alt="star" />
+    </div>
+    <div class="btn-holder">
+      <button onclick="resetRating()" class="btn-click">Clear</button>
+      <button onclick="alert('submitted')" class="btn-click btn-submit">Submit</button>
+    </div>
+  </div>
+</body>
+
+</html>
