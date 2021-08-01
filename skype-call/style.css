@@ -13,7 +13,9 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #000;
+  background-color: #222;
+  /* background: linear-gradient(#17eca5, #06c); */
+  /* background: linear-gradient(#17eca5, #d12828); */
   display: grid;
   place-items: center;
   color: var(--white-back);

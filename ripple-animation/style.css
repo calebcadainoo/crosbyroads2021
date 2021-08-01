@@ -1,0 +1,73 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.ripple-container {
+  width: 350px;
+  text-align: center;
+}
+
+.ripple-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.ripple-avatar,
+.ripple-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.ripple-text {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+/* ripple animation */
+@keyframes rippleAnimation {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* applying the animation */
+.ripple-box::before,
+.ripple-avatar::before,
+.ripple-avatar::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #17eca5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.ripple-box::before {
+  z-index: 0;
+  animation: 2s ease-out rippleAnimation infinite;
+}
+
+.ripple-avatar::before {
+  animation: 2s 1s ease-out rippleAnimation infinite;
+}
+
+.ripple-avatar::after {
+  animation: 2s 0.5s ease-out rippleAnimation infinite;
+}
